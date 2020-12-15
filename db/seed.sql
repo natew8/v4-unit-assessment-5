@@ -1,0 +1,15 @@
+-- CREATE TABLE helo_users(
+-- id SERIAL PRIMARY key,
+-- username VARCHAR NOT NULL,
+-- password VARCHAR NOT NULL,
+-- profile_pic text
+-- );
+
+-- CREATE TABLE helo_post(
+-- id SERIAL PRIMARY KEY,
+-- title VARCHAR(45),
+-- content text,
+-- img text,
+-- author_id INT REFERENCES helo_users(id),
+-- date_created TIMESTAMP 
+-- );

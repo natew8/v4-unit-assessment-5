@@ -16,10 +16,10 @@ class Form extends Component {
 
   submit() {
     axios.post('/api/post', this.state)
-      .then(() => 'replace this string with something useful')
+      .then(() => this.props.history.push('/dash'))
       .catch((err) => console.log(err))
   }
-  
+
   render() {
     let imgSrc = this.state.img ? this.state.img : noImage;
 
@@ -31,7 +31,7 @@ class Form extends Component {
             <p>Title:</p>
             <input value={this.state.title} onChange={e => this.setState({ title: e.target.value })} />
           </div>
-          <img className='form-img-prev' src={imgSrc} alt='preview'/>
+          <img className='form-img-prev' src={imgSrc} alt='preview' />
           <div className='form-input-box'>
             <p>Image URL:</p>
             <input value={this.state.img} onChange={e => this.setState({ img: e.target.value })} />

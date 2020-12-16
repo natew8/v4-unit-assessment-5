@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import noImage from './../../assets/no_image.jpg';
 import './Form.css';
+import { connect } from 'react-redux';
 
 class Form extends Component {
   constructor(props) {
@@ -13,6 +14,7 @@ class Form extends Component {
     };
     this.submit = this.submit.bind(this);
   }
+
 
   submit() {
     axios.post('/api/post', this.state)
@@ -46,5 +48,9 @@ class Form extends Component {
     );
   }
 }
-
-export default Form;
+function mapStateToProps(state) {
+  return {
+    id: state.id
+  }
+}
+export default connect(mapStateToProps)(Form);

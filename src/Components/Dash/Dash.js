@@ -42,6 +42,7 @@ class Dash extends Component {
       .then(res => {
         this.setState({ posts: res.data, loading: false })
       })
+
   }
 
   deletePost = id => {

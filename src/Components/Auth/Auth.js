@@ -34,7 +34,7 @@ class Auth extends Component {
         this.setState({ errorMsg: 'Incorrect username or password!' })
       })
   }
-
+  /*this now allows you to make a post when you first register! woo */
   register() {
     axios.post('/api/auth/register', this.state)
       .then(res => {

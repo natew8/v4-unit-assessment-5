@@ -18,7 +18,7 @@ app.use(session({
     cookie: { maxAge: 1000 * 60 * 60 * 24 }
 }))
 
-//Auth Endpoints
+//Authentication Endpoints
 app.post('/api/auth/register', userCtrl.register);
 app.post('/api/auth/login', userCtrl.login);
 app.get('/api/auth/me', userCtrl.getUser);

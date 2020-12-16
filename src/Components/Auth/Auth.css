@@ -71,3 +71,33 @@
     justify-content: space-around;
     width: 55%;
   }
+
+  @media(max-width: 965px){
+    .auth-container {
+      box-shadow: none;
+      background-image: none;
+      width: 80vw;
+      height: 55vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      padding: 5px;
+      position: relative;
+    }
+    .auth-input-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 55%;
+    }
+    .auth-input-box > input {
+      height: 30px;
+      border: none;
+    }
+    .auth-button-container {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+    }
+  }
